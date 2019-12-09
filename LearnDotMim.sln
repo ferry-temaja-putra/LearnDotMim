@@ -9,7 +9,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncServer", "SyncServer\Sy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncClient", "SyncClient\SyncClient.csproj", "{ABD73B03-3615-4342-AA6E-31C534133A9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthSyncServer", "AuthSyncServer\AuthSyncServer.csproj", "{4D543A1D-A535-4075-BF82-C2CF49719A60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthSyncClient", "AuthSyncClient\AuthSyncClient.csproj", "{E2ED4CA2-00E2-4CFF-9501-B53ABEAC0996}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AuthSyncSharedData", "AuthSyncSharedData\AuthSyncSharedData.shproj", "{4941513D-9CB5-498B-A4D1-2EB3415CF992}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		AuthSyncSharedData\AuthSyncSharedData.projitems*{4941513d-9cb5-498b-a4d1-2eb3415cf992}*SharedItemsImports = 13
+		AuthSyncSharedData\AuthSyncSharedData.projitems*{e2ed4ca2-00e2-4cff-9501-b53abeac0996}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -27,6 +37,14 @@ Global
 		{ABD73B03-3615-4342-AA6E-31C534133A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABD73B03-3615-4342-AA6E-31C534133A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABD73B03-3615-4342-AA6E-31C534133A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D543A1D-A535-4075-BF82-C2CF49719A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D543A1D-A535-4075-BF82-C2CF49719A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D543A1D-A535-4075-BF82-C2CF49719A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D543A1D-A535-4075-BF82-C2CF49719A60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2ED4CA2-00E2-4CFF-9501-B53ABEAC0996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2ED4CA2-00E2-4CFF-9501-B53ABEAC0996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2ED4CA2-00E2-4CFF-9501-B53ABEAC0996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2ED4CA2-00E2-4CFF-9501-B53ABEAC0996}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
