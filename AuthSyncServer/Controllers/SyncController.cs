@@ -1,9 +1,11 @@
 ﻿using Dotmim.Sync.Web.Server;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace AuthSyncServer.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class SyncController : ControllerBase

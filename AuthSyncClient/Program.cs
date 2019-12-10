@@ -65,7 +65,7 @@ namespace AuthSyncClient
         {
             var serverUri = new Uri(Properties.Settings.Default.SyncServer + "api/sync");
             var proxyClientProvider = new WebProxyClientProvider(serverUri);
-            proxyClientProvider.AddCustomHeader("Authorization", token);
+            proxyClientProvider.AddCustomHeader("Authorization", "Bearer " + token);
 
             var clientProvider = new SqliteSyncProvider("advworks.db");
 
