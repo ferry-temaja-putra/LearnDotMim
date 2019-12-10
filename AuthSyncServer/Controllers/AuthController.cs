@@ -10,6 +10,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.Extensions.Options;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AuthSyncServer.Controllers
 {
@@ -24,6 +25,7 @@ namespace AuthSyncServer.Controllers
             jwtSettings = jwtSettingsOption.Value;
         }
 
+        [HttpPost]
         public IActionResult Login([FromBody] LoginInfo loginInfo)
         {
             if (loginInfo == null || loginInfo.InputValid == false)
@@ -57,6 +59,6 @@ namespace AuthSyncServer.Controllers
             user.Token = tokenHandler.WriteToken(token);
 
             return Ok(user);
-        }
+        }        
     }
 }

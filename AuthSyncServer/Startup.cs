@@ -74,6 +74,7 @@ namespace AuthSyncServer
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

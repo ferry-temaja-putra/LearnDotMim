@@ -3,11 +3,8 @@ using Dotmim.Sync;
 using Dotmim.Sync.Sqlite;
 using Dotmim.Sync.Web.Client;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AuthSyncClient
@@ -30,12 +27,13 @@ namespace AuthSyncClient
 
         static async Task MainAsync()
         {
-            ConfigureHttpClient();
+            ConfigureHttpClient();            
 
             var user = await Authenticate();
             if (user == null)
             {
                 Console.WriteLine("Unauthorised");
+                Console.ReadKey();
                 return;
             }
 
@@ -60,7 +58,7 @@ namespace AuthSyncClient
 
             return await response.Content.ReadAsAsync<User>();
         }
-
+        
         static async Task SyncData(string token)
         {
             var serverUri = new Uri(Properties.Settings.Default.SyncServer + "api/sync");
