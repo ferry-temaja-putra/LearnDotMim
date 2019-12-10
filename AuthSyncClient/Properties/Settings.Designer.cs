@@ -25,7 +25,7 @@ namespace AuthSyncClient.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44356/api/sync")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44356/")]
         public string SyncServer {
             get {
                 return ((string)(this["SyncServer"]));
