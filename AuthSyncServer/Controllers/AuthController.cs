@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AuthSyncSharedData;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Text;
-using Microsoft.Extensions.Options;
-using System.Security.Claims;
+﻿using AuthSyncSharedData;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace AuthSyncServer.Controllers
 {
@@ -25,6 +21,7 @@ namespace AuthSyncServer.Controllers
             jwtSettings = jwtSettingsOption.Value;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult Login([FromBody] LoginInfo loginInfo)
         {
